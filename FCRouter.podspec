@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "FCRouter"
-  s.version      = "0.0.0"
+  s.version      = "0.0.1"
   s.summary      = "ForC"
   s.homepage     = "https://github.com/Heqiao1025/FCRouter.git"
   s.license      = {
