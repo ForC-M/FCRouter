@@ -1,10 +1,5 @@
-//
-//  FCRouter.h
-//  AFNText
-//
-//  Created by heqiao on 2019/3/10.
+//  Created by ForC on 2019/3/10.
 //  Copyright © 2019年 ForC. All rights reserved.
-//
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIViewController.h>

@@ -1,10 +1,5 @@
-//
-//  FCRouter.m
-//  AFNText
-//
-//  Created by heqiao on 2019/3/10.
+//  Created by ForC on 2019/3/10.
 //  Copyright © 2019年 ForC. All rights reserved.
-//
 
 #import "FCRouter.h"
 #import <objc/runtime.h>
