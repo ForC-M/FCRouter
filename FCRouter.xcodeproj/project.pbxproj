@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DF87ED4D223F9DF200D3330C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DF87ED4C223F9DF200D3330C /* AppDelegate.m */; };
+		DF87ED50223F9DF200D3330C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF87ED4F223F9DF200D3330C /* ViewController.m */; };
+		DF87ED53223F9DF200D3330C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF87ED51223F9DF200D3330C /* Main.storyboard */; };
+		DF87ED55223F9DF400D3330C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF87ED54223F9DF400D3330C /* Assets.xcassets */; };
+		DF87ED58223F9DF400D3330C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF87ED56223F9DF400D3330C /* LaunchScreen.storyboard */; };
+		DF87ED5B223F9DF400D3330C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DF87ED5A223F9DF400D3330C /* main.m */; };
+		DF87ED65223F9DF400D3330C /* FCRouterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DF87ED64223F9DF400D3330C /* FCRouterTests.m */; };
+		DF87ED70223F9DF400D3330C /* FCRouterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DF87ED6F223F9DF400D3330C /* FCRouterUITests.m */; };
+		DF87ED7F223F9E2000D3330C /* FCRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = DF87ED7D223F9E2000D3330C /* FCRouter.m */; };
+		DF87ED832240DA1300D3330C /* Test.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF87ED822240DA1300D3330C /* Test.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DF87ED61223F9DF400D3330C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF87ED40223F9DF200D3330C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF87ED47223F9DF200D3330C;
+			remoteInfo = FCRouter;
+		};
+		DF87ED6C223F9DF400D3330C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF87ED40223F9DF200D3330C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF87ED47223F9DF200D3330C;
+			remoteInfo = FCRouter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DF87ED48223F9DF200D3330C /* FCRouter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FCRouter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF87ED4B223F9DF200D3330C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DF87ED4C223F9DF200D3330C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DF87ED4E223F9DF200D3330C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DF87ED4F223F9DF200D3330C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DF87ED52223F9DF200D3330C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DF87ED54223F9DF400D3330C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DF87ED57223F9DF400D3330C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DF87ED59223F9DF400D3330C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF87ED5A223F9DF400D3330C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DF87ED60223F9DF400D3330C /* FCRouterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FCRouterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF87ED64223F9DF400D3330C /* FCRouterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCRouterTests.m; sourceTree = "<group>"; };
+		DF87ED66223F9DF400D3330C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF87ED6B223F9DF400D3330C /* FCRouterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FCRouterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF87ED6F223F9DF400D3330C /* FCRouterUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCRouterUITests.m; sourceTree = "<group>"; };
+		DF87ED71223F9DF400D3330C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF87ED7D223F9E2000D3330C /* FCRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCRouter.m; sourceTree = "<group>"; };
+		DF87ED7E223F9E2000D3330C /* FCRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCRouter.h; sourceTree = "<group>"; };
+		DF87ED822240DA1300D3330C /* Test.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Test.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DF87ED45223F9DF200D3330C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF87ED5D223F9DF400D3330C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF87ED68223F9DF400D3330C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DF87ED3F223F9DF200D3330C = {
+			isa = PBXGroup;
+			children = (
+				DF87ED4A223F9DF200D3330C /* FCRouter */,
+				DF87ED63223F9DF400D3330C /* FCRouterTests */,
+				DF87ED6E223F9DF400D3330C /* FCRouterUITests */,
+				DF87ED49223F9DF200D3330C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DF87ED49223F9DF200D3330C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DF87ED48223F9DF200D3330C /* FCRouter.app */,
+				DF87ED60223F9DF400D3330C /* FCRouterTests.xctest */,
+				DF87ED6B223F9DF400D3330C /* FCRouterUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DF87ED4A223F9DF200D3330C /* FCRouter */ = {
+			isa = PBXGroup;
+			children = (
+				DF87ED4B223F9DF200D3330C /* AppDelegate.h */,
+				DF87ED4C223F9DF200D3330C /* AppDelegate.m */,
+				DF87ED4E223F9DF200D3330C /* ViewController.h */,
+				DF87ED4F223F9DF200D3330C /* ViewController.m */,
+				DF87ED7E223F9E2000D3330C /* FCRouter.h */,
+				DF87ED7D223F9E2000D3330C /* FCRouter.m */,
+				DF87ED822240DA1300D3330C /* Test.plist */,
+				DF87ED51223F9DF200D3330C /* Main.storyboard */,
+				DF87ED54223F9DF400D3330C /* Assets.xcassets */,
+				DF87ED56223F9DF400D3330C /* LaunchScreen.storyboard */,
+				DF87ED59223F9DF400D3330C /* Info.plist */,
+				DF87ED5A223F9DF400D3330C /* main.m */,
+			);
+			path = FCRouter;
+			sourceTree = "<group>";
+		};
+		DF87ED63223F9DF400D3330C /* FCRouterTests */ = {
+			isa = PBXGroup;
+			children = (
+				DF87ED64223F9DF400D3330C /* FCRouterTests.m */,
+				DF87ED66223F9DF400D3330C /* Info.plist */,
+			);
+			path = FCRouterTests;
+			sourceTree = "<group>";
+		};
+		DF87ED6E223F9DF400D3330C /* FCRouterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DF87ED6F223F9DF400D3330C /* FCRouterUITests.m */,
+				DF87ED71223F9DF400D3330C /* Info.plist */,
+			);
+			path = FCRouterUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DF87ED47223F9DF200D3330C /* FCRouter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF87ED74223F9DF400D3330C /* Build configuration list for PBXNativeTarget "FCRouter" */;
+			buildPhases = (
+				DF87ED44223F9DF200D3330C /* Sources */,
+				DF87ED45223F9DF200D3330C /* Frameworks */,
+				DF87ED46223F9DF200D3330C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FCRouter;
+			productName = FCRouter;
+			productReference = DF87ED48223F9DF200D3330C /* FCRouter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DF87ED5F223F9DF400D3330C /* FCRouterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF87ED77223F9DF400D3330C /* Build configuration list for PBXNativeTarget "FCRouterTests" */;
+			buildPhases = (
+				DF87ED5C223F9DF400D3330C /* Sources */,
+				DF87ED5D223F9DF400D3330C /* Frameworks */,
+				DF87ED5E223F9DF400D3330C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DF87ED62223F9DF400D3330C /* PBXTargetDependency */,
+			);
+			name = FCRouterTests;
+			productName = FCRouterTests;
+			productReference = DF87ED60223F9DF400D3330C /* FCRouterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DF87ED6A223F9DF400D3330C /* FCRouterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF87ED7A223F9DF400D3330C /* Build configuration list for PBXNativeTarget "FCRouterUITests" */;
+			buildPhases = (
+				DF87ED67223F9DF400D3330C /* Sources */,
+				DF87ED68223F9DF400D3330C /* Frameworks */,
+				DF87ED69223F9DF400D3330C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DF87ED6D223F9DF400D3330C /* PBXTargetDependency */,
+			);
+			name = FCRouterUITests;
+			productName = FCRouterUITests;
+			productReference = DF87ED6B223F9DF400D3330C /* FCRouterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DF87ED40223F9DF200D3330C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = ForC;
+				TargetAttributes = {
+					DF87ED47223F9DF200D3330C = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					DF87ED5F223F9DF400D3330C = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = DF87ED47223F9DF200D3330C;
+					};
+					DF87ED6A223F9DF400D3330C = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = DF87ED47223F9DF200D3330C;
+					};
+				};
+			};
+			buildConfigurationList = DF87ED43223F9DF200D3330C /* Build configuration list for PBXProject "FCRouter" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DF87ED3F223F9DF200D3330C;
+			productRefGroup = DF87ED49223F9DF200D3330C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DF87ED47223F9DF200D3330C /* FCRouter */,
+				DF87ED5F223F9DF400D3330C /* FCRouterTests */,
+				DF87ED6A223F9DF400D3330C /* FCRouterUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DF87ED46223F9DF200D3330C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF87ED832240DA1300D3330C /* Test.plist in Resources */,
+				DF87ED58223F9DF400D3330C /* LaunchScreen.storyboard in Resources */,
+				DF87ED55223F9DF400D3330C /* Assets.xcassets in Resources */,
+				DF87ED53223F9DF200D3330C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF87ED5E223F9DF400D3330C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF87ED69223F9DF400D3330C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DF87ED44223F9DF200D3330C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF87ED50223F9DF200D3330C /* ViewController.m in Sources */,
+				DF87ED5B223F9DF400D3330C /* main.m in Sources */,
+				DF87ED4D223F9DF200D3330C /* AppDelegate.m in Sources */,
+				DF87ED7F223F9E2000D3330C /* FCRouter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF87ED5C223F9DF400D3330C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF87ED65223F9DF400D3330C /* FCRouterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF87ED67223F9DF400D3330C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF87ED70223F9DF400D3330C /* FCRouterUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DF87ED62223F9DF400D3330C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF87ED47223F9DF200D3330C /* FCRouter */;
+			targetProxy = DF87ED61223F9DF400D3330C /* PBXContainerItemProxy */;
+		};
+		DF87ED6D223F9DF400D3330C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF87ED47223F9DF200D3330C /* FCRouter */;
+			targetProxy = DF87ED6C223F9DF400D3330C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DF87ED51223F9DF200D3330C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DF87ED52223F9DF200D3330C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DF87ED56223F9DF400D3330C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DF87ED57223F9DF400D3330C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DF87ED72223F9DF400D3330C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DF87ED73223F9DF400D3330C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DF87ED75223F9DF400D3330C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FCRouter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.FCRouter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DF87ED76223F9DF400D3330C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FCRouter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.FCRouter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DF87ED78223F9DF400D3330C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FCRouterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.FCRouterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FCRouter.app/FCRouter";
+			};
+			name = Debug;
+		};
+		DF87ED79223F9DF400D3330C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FCRouterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.FCRouterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FCRouter.app/FCRouter";
+			};
+			name = Release;
+		};
+		DF87ED7B223F9DF400D3330C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FCRouterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.FCRouterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FCRouter;
+			};
+			name = Debug;
+		};
+		DF87ED7C223F9DF400D3330C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FCRouterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.FCRouterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FCRouter;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DF87ED43223F9DF200D3330C /* Build configuration list for PBXProject "FCRouter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF87ED72223F9DF400D3330C /* Debug */,
+				DF87ED73223F9DF400D3330C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF87ED74223F9DF400D3330C /* Build configuration list for PBXNativeTarget "FCRouter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF87ED75223F9DF400D3330C /* Debug */,
+				DF87ED76223F9DF400D3330C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF87ED77223F9DF400D3330C /* Build configuration list for PBXNativeTarget "FCRouterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF87ED78223F9DF400D3330C /* Debug */,
+				DF87ED79223F9DF400D3330C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF87ED7A223F9DF400D3330C /* Build configuration list for PBXNativeTarget "FCRouterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF87ED7B223F9DF400D3330C /* Debug */,
+				DF87ED7C223F9DF400D3330C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DF87ED40223F9DF200D3330C /* Project object */;
+}

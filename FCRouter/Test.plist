@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ForC://home/scan/album</key>
+	<string>ViewController</string>
+    <key>ForC://home/scan/album1</key>
+    <string>UIViewController</string>
+    <key>ForC://home/scan/album2</key>
+    <string>ViewController</string>
+    <key>ForC://home/scan/album3</key>
+    <string>UIViewController</string>
+    <key>ForC://home/scan/album4</key>
+    <string>ViewController</string>
+    <key>ForC://home/scan/album5</key>
+    <string>UIViewController</string>
+    <key>ForC://home/scan/album6</key>
+    <string>ViewController</string>
+    <key>ForC://home/scan/album7</key>
+    <string>UIViewController</string>
+    <key>ForC://home/scan/album8</key>
+    <string>ViewController</string>
+    <key>ForC://home/scan/album9</key>
+    <string>UIViewController</string>
+</dict>
+</plist>
