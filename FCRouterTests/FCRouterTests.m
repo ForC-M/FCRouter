@@ -23,7 +23,7 @@
     
 }
 
-- (void)testVCAPINotQuery {
+- (void)testClassAPINotQuery {
     [FCRouter.share regsiterUrl:FCRouterBase(@"mine/setting/replacePassword") mapViewControllerClass:[ViewController class]];
     [FCRouter.share regsiterUrl:FCRouterBase(@"mine/setting") mapViewControllerClass:[UIViewController class]];
      userInfo:@{@"old":@"123456", @"iphone":@"18840851362"}];
@@ -36,7 +36,7 @@
     XCTAssertEqualObjects(vc.routerParamters[@"author"], paramters[@"author"]);
 }
 
-- (void)testVCAPIContainQuery {
+- (void)testClassAPIContainQuery {
     [FCRouter.share regsiterUrl:FCRouterBase(@"authorCycle/:friendID/detail") mapViewControllerClass:[ViewController class]];
     UIViewController *vc = [FCRouter.share matchViewControllerWithUrl:FCRouterBase(@"authorCycle/1002/detail?id=1000&author=ForC") userInfo:@{@"sex":@"1", @"iphone":@"18840851362"}];
     
@@ -50,7 +50,7 @@
 }
 
 
-- (void)testPlistVCAPIClass {
+- (void)testClassPlistAPI {
     [FCRouter.share regsiterPlistPathForSource:@"Test" bundle:[NSBundle mainBundle]];
 
     UIViewController *vc = [FCRouter.share matchViewControllerWithUrl:FCRouterBase(@"home/scan/album1")];
@@ -76,7 +76,7 @@
     XCTAssertEqual(value2, @(NO));
 }
 
-- (void)testAPIHandleAPIContainQuery {
+- (void)testHandleAPIContainQuery {
     [FCRouter.share regsiterUrl:FCRouterBase(@"order/:status/orderID") mapHandle:^id(NSDictionary *paramters) {
         if ([paramters[@"status"] isEqualToString:@"finish"]) {
             return @(YES);
