@@ -1,11 +1,14 @@
 # FCRouter
-====
+
 
 URL Router for iOS(object-c/swift). Async Register Mapping Relation
 
 Inspired : 
+
 [HHRouter](https://github.com/lightory/HHRouter)
+
 [ABRouter](https://github.com/aaronbrethorst/ABRouter)
+
 [Routable iOS](https://github.com/usepropeller/routable-ios)
 
 ##Installation
@@ -13,7 +16,7 @@ Inspired :
 ###[cocoapods](https://cocoapods.org/)
 
 ```ruby
-pod 'FCRouter', '~> 0.1.0'
+pod 'FCRouter', '~> 0.1.1'
 ```
 
 ```objective-c
@@ -52,13 +55,13 @@ UIViewController *vc = [FCRouter.share matchViewControllerWithUrl:@"ForC://mine/
 UIViewController *vc = [FCRouter.share matchViewControllerWithUrl:@"ForC://mine/:userID/replacePassword"]
 ```
 
-### register Handle
+### Register Handle
 
 ```objective-c
 - (void)regsiterUrl:(NSString *)url mapHandle:(FCRouterHandle)handle
 ```
 
-### register Plist Map
+### Register Plist Map
 
 ```objective-c
 - (void)regsiterPlistPathForSource:(NSString *)source bundle:(NSBundle *)bundle;
