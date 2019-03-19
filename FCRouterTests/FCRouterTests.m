@@ -26,7 +26,7 @@
 - (void)testVCAPINotQuery {
     [FCRouter.share regsiterUrl:FCRouterBase(@"mine/setting/replacePassword") mapViewControllerClass:[ViewController class]];
     [FCRouter.share regsiterUrl:FCRouterBase(@"mine/setting") mapViewControllerClass:[UIViewController class]];
-    UIViewController *vc = [FCRouter.share matchViewControllerWithUrl:FCRouterBase(@"mine/setting/replacePassword?id=1002&author=ForC") userInfo:@{@"old":@"123456", @"iphone":@"18840851362"}];
+     userInfo:@{@"old":@"123456", @"iphone":@"18840851362"}];
     
     NSDictionary *paramters = @{@"old":@"123456", @"iphone":@"18840851362",@"id":@"1002",@"author":@"ForC"};
     XCTAssertEqualObjects(NSStringFromClass(vc.class), @"ViewController");
