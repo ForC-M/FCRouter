@@ -11,7 +11,9 @@ Inspired :
 
 [Routable iOS](https://github.com/usepropeller/routable-ios)
 
+
 ##Installation
+
 
 ###[cocoapods](https://cocoapods.org/)
 
@@ -23,13 +25,16 @@ pod 'FCRouter', '~> 0.1.1'
 #import <FCRouter/FCRouter.h>
 ```
 
+
 ###[gitsubmodule](http://schacon.github.io/git/user-manual.html#submodules)
 
 ```git
 $ git submodule add https://github.com/Heqiao1025/FCRouter
 ```
 
+
 ##Usage
+
 
 ### Launching
 
