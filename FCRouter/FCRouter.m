@@ -33,10 +33,6 @@ static NSString *_FCRouterMatchType = @"_FCRouterMatchType";
 static NSString *_FCRouterMatchContent = @"_";
 NSString *FCRouterKey = @"_FCRouter";
 
-static void FCDebugLog(NSDictionary *dic) {
-    NSLog(@"%@", dic);
-}
-
 static NSDictionary *FCRouterCustomParamters(NSMutableDictionary *routerParamters, NSString *url) {
     [routerParamters removeObjectForKey:_FCRouterMatchType];
     [routerParamters removeObjectForKey:_FCRouterMatchContent];
@@ -87,7 +83,6 @@ static NSDictionary *FCRouterCustomParamters(NSMutableDictionary *routerParamter
             subrouter[_FCRouterMatchContent] = NSClassFromString(value);
             subrouter[_FCRouterMatchType]    = @(FCRouterMatchTypeClass);
         }
-        FCDebugLog(self.routerMaps);
     });
 }
 
@@ -96,7 +91,6 @@ static NSDictionary *FCRouterCustomParamters(NSMutableDictionary *routerParamter
         NSMutableDictionary *subrouter   = [self addRouters:url];
         subrouter[_FCRouterMatchContent] = VCClass;
         subrouter[_FCRouterMatchType]    = @(FCRouterMatchTypeClass);
-        FCDebugLog(self.routerMaps);
     });
 }
 
@@ -105,7 +99,6 @@ static NSDictionary *FCRouterCustomParamters(NSMutableDictionary *routerParamter
         NSMutableDictionary *subrouter   = [self addRouters:url];
         subrouter[_FCRouterMatchContent] = handle;
         subrouter[_FCRouterMatchType]    = @(FCRouterMatchTypeHandle);
-        FCDebugLog(self.routerMaps);
     });
 }
 
@@ -122,7 +115,6 @@ static NSDictionary *FCRouterCustomParamters(NSMutableDictionary *routerParamter
             Class vcClass                       = subrouter[_FCRouterMatchContent];
             viewController    = [vcClass new];
             viewController.routerParamters      = FCRouterCustomParamters(subrouter, url);
-            FCDebugLog(self.routerMaps);
         }
     });
     return viewController;
@@ -138,7 +130,6 @@ static NSDictionary *FCRouterCustomParamters(NSMutableDictionary *routerParamter
             @autoreleasepool {
                 value                           = handle(FCRouterCustomParamters(subrouter, url));
             }
-            FCDebugLog(self.routerMaps);
         }
     });
     return value;
