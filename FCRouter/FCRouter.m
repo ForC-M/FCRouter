@@ -37,12 +37,13 @@ static NSDictionary *FCRouterCustomParamters(NSMutableDictionary *routerParamter
     [routerParamters removeObjectForKey:_FCRouterMatchType];
     [routerParamters removeObjectForKey:_FCRouterMatchContent];
     routerParamters[FCRouterKey] = url;
-    for (NSString *paraString in [[NSURL URLWithString:url].query componentsSeparatedByString:@"&"]) {
+    for (NSString *paraString in [[NSURL URLWithString:[url stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]]].query componentsSeparatedByString:@"&"]) {
         NSArray *paraArray = [paraString componentsSeparatedByString:@"="];
         if (paraArray.count != 2) {
             continue;
         }
-        routerParamters[paraArray.firstObject] = paraArray.lastObject;
+        NSString *value = paraArray.lastObject;
+        routerParamters[paraArray.firstObject] = [value stringByRemovingPercentEncoding];
     }
     return routerParamters.copy;
 }
@@ -200,23 +201,24 @@ static NSDictionary *FCRouterCustomParamters(NSMutableDictionary *routerParamter
     __block FCRouterMatchType type;
     dispatch_sync(self.routeMapsModificationQueue, ^{
         NSMutableDictionary *subrouter = [self subRouters:url];
-         type = [subrouter[_FCRouterMatchType] integerValue];
+        type = [subrouter[_FCRouterMatchType] integerValue];
     });
     return type;
 }
 
 - (NSArray<NSString *> *)pathcomponentsWithUrl:(NSString *)url {
-    if (![NSURL URLWithString:url]) {
+    NSURL *uri = [NSURL URLWithString:[url stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]]];
+    if (!uri) {
         return nil;
     }
     NSMutableArray *pathCompoments = [NSMutableArray array];
-    for (NSString *pathCompoment in [NSURL URLWithString:url].pathComponents) {
+    for (NSString *pathCompoment in uri.pathComponents) {
         if ([pathCompoment isEqualToString:@"/"]) continue;
         if ([[pathCompoment substringToIndex:1] isEqualToString:@"?"]) break;
         [pathCompoments addObject:pathCompoment];
     }
-    [pathCompoments insertObject:[NSURL URLWithString:url].scheme atIndex:0];
-    [pathCompoments insertObject:[NSURL URLWithString:url].host atIndex:1];
+    [pathCompoments insertObject:uri.scheme atIndex:0];
+    [pathCompoments insertObject:uri.host atIndex:1];
     return pathCompoments.copy;
 }
 
