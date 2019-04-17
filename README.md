@@ -18,7 +18,7 @@ Inspired :
 ### [cocoapods](https://cocoapods.org/)
 
 ```ruby
-pod 'FCRouter', '~> 0.1.2'
+pod 'FCRouter'
 ```
 
 ```objective-c
