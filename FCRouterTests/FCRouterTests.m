@@ -26,14 +26,12 @@
 - (void)testClassAPINotQuery {
     [FCRouter.share regsiterUrl:FCRouterBase(@"mine/setting/replacePassword") mapViewControllerClass:[ViewController class]];
     [FCRouter.share regsiterUrl:FCRouterBase(@"mine/setting") mapViewControllerClass:[UIViewController class]];
-     userInfo:@{@"old":@"123456", @"iphone":@"18840851362"}];
+    UIViewController *vc = [FCRouter.share matchViewControllerWithUrl:FCRouterBase(@"mine/setting/replacePassword") userInfo:@{@"old":@"123456", @"iphone":@"18840851362"}];
     
     NSDictionary *paramters = @{@"old":@"123456", @"iphone":@"18840851362",@"id":@"1002",@"author":@"ForC"};
     XCTAssertEqualObjects(NSStringFromClass(vc.class), @"ViewController");
-    XCTAssertEqualObjects(vc.routerParamters[@"id"], paramters[@"id"]);
     XCTAssertEqualObjects(vc.routerParamters[@"iphone"], paramters[@"iphone"]);
     XCTAssertEqualObjects(vc.routerParamters[@"old"], paramters[@"old"]);
-    XCTAssertEqualObjects(vc.routerParamters[@"author"], paramters[@"author"]);
 }
 
 - (void)testClassAPIContainQuery {
@@ -87,6 +85,20 @@
     id value2 = [FCRouter.share matchHandleWithUrl:FCRouterBase(@"order/finish/orderID?orderID=10086&userID=1001")];
     XCTAssertEqual(value1, @(NO));
     XCTAssertEqual(value2, @(YES));
+}
+
+- (void)testRemoveHandle {
+    [FCRouter.share regsiterUrl:FCRouterBase(@"order/detail") mapHandle:^id(NSDictionary *paramters) {
+        return @"detail";
+    }];
+    [FCRouter.share regsiterUrl:FCRouterBase(@"order/detail/apply") mapHandle:^id(NSDictionary *paramters) {
+        return @"apply";
+    }];
+    [FCRouter.share removeHandleWithUrl:FCRouterBase(@"order/detail")];
+    BOOL open = [FCRouter canOpenUrl:FCRouterBase(@"order/detail")];
+    XCTAssertFalse(open);
+    NSString *apply = [FCRouter.share matchHandleWithUrl:FCRouterBase(@"order/detail/apply")];
+    XCTAssertEqual(apply, @"apply");
 }
 
 @end

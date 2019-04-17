@@ -52,6 +52,8 @@ FOUNDATION_EXPORT NSString *FCRouterKey;
 
 - (id)matchHandleWithUrl:(NSString *)url userInfo:(NSDictionary *)userInfo;
 
+- (void)removeHandleWithUrl:(NSString *)url;
+
 + (BOOL)canOpenUrl:(NSString *)url;
 
 @end

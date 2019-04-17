@@ -110,7 +110,7 @@ static NSDictionary *FCRouterCustomParamters(NSMutableDictionary *routerParamter
 - (UIViewController *)matchViewControllerWithUrl:(NSString *)url userInfo:(NSDictionary *)userInfo {
     __block UIViewController *viewController = nil;
     dispatch_sync(self.routeMapsModificationQueue, ^{
-        NSMutableDictionary *subrouter          = [self subRouters:url];
+        NSMutableDictionary *subrouter          = [self subRouters:url].mutableCopy;
         if ([subrouter[_FCRouterMatchType] integerValue] == FCRouterMatchTypeClass) {
             [subrouter addEntriesFromDictionary:userInfo];
             Class vcClass                       = subrouter[_FCRouterMatchContent];
@@ -124,7 +124,7 @@ static NSDictionary *FCRouterCustomParamters(NSMutableDictionary *routerParamter
 - (id)matchHandleWithUrl:(NSString *)url userInfo:(NSDictionary *)userInfo {
     __block id value = nil;
     dispatch_sync(self.routeMapsModificationQueue, ^{
-        NSMutableDictionary *subrouter          = [self subRouters:url];
+        NSMutableDictionary *subrouter          = [self subRouters:url].mutableCopy;
         if ([subrouter[_FCRouterMatchType] integerValue] == FCRouterMatchTypeHandle) {
             FCRouterHandle handle               = subrouter[_FCRouterMatchContent];
             [subrouter addEntriesFromDictionary:userInfo];
@@ -140,6 +140,16 @@ static NSDictionary *FCRouterCustomParamters(NSMutableDictionary *routerParamter
     return [self matchHandleWithUrl:url userInfo:nil];
 }
 
+- (void)removeHandleWithUrl:(NSString *)url {
+    dispatch_sync(self.routeMapsModificationQueue, ^{
+        NSMutableDictionary *subrouter          = [self subRouters:url];
+        if ([subrouter[_FCRouterMatchType] integerValue] == FCRouterMatchTypeHandle) {
+            [subrouter removeObjectForKey:_FCRouterMatchContent];
+            [subrouter removeObjectForKey:_FCRouterMatchType];
+        }
+    });
+}
+
 + (BOOL)canOpenUrl:(NSString *)url {
     return [[self share] p_matchTypeWithUrl:url] != FCRouterMatchTypeNone;
 }
@@ -147,7 +157,7 @@ static NSDictionary *FCRouterCustomParamters(NSMutableDictionary *routerParamter
 - (UIViewController *)openUrl:(NSString *)url {
     __block UIViewController *viewController = nil;
     dispatch_sync(self.routeMapsModificationQueue, ^{
-        NSMutableDictionary *subrouter          = [self subRouters:url];
+        NSMutableDictionary *subrouter          = [self subRouters:url].mutableCopy;
         if ([subrouter[_FCRouterMatchType] integerValue] == FCRouterMatchTypeClass) {
             Class vcClass                       = subrouter[_FCRouterMatchContent];
             viewController    = [vcClass new];
@@ -194,13 +204,13 @@ static NSDictionary *FCRouterCustomParamters(NSMutableDictionary *routerParamter
     }
     // 拼接一下自定义的
     [subRouter addEntriesFromDictionary:extMap];
-    return subRouter.mutableCopy;
+    return subRouter;
 }
 
 - (FCRouterMatchType)p_matchTypeWithUrl:(NSString *)url {
     __block FCRouterMatchType type;
     dispatch_sync(self.routeMapsModificationQueue, ^{
-        NSMutableDictionary *subrouter = [self subRouters:url];
+        NSMutableDictionary *subrouter = [self subRouters:url].mutableCopy;
         type = [subrouter[_FCRouterMatchType] integerValue];
     });
     return type;
